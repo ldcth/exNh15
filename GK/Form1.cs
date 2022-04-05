@@ -37,7 +37,8 @@ namespace GK
         {
             string LSH=cbbLSH.SelectedItem.ToString();
             string name=tbName.Text;
-            dataGridView1.DataSource = bll.GetSVByLSH(LSH,name);   
+            dataGridView1.DataSource = bll.GetSVByLSH(LSH,name);
+            //cc
         }
     }
 }
