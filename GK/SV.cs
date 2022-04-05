@@ -16,8 +16,8 @@ namespace GK
         public double DTB { get; set; }
         public bool Anh { get; set; }
         public bool Hocba { get; set; }
-        public bool CCNN { get; set; }
-        public SV(string id, string name, string lop, bool gender, DateTime ns, double dtb, bool anh, bool hb, bool ccnn)
+        public bool CMND { get; set; }
+        public SV(string id, string name, string lop, bool gender, DateTime ns, double dtb, bool anh, bool hb, bool cmnd)
         {
             this.MSSV = id;
             this.NameSV = name;
@@ -27,7 +27,7 @@ namespace GK
             this.DTB = dtb;
             this.Anh = anh;
             this.Hocba = hb;
-            this.CCNN = ccnn;
+            this.CMND = cmnd;
         }
         public SV() { }
     }

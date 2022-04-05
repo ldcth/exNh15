@@ -31,7 +31,7 @@ namespace GK
                 DTB = Convert.ToDouble(i["DTB"].ToString()),
                 Anh = Convert.ToBoolean(i["Anh"].ToString()),
                 Hocba = Convert.ToBoolean(i["HB"].ToString()),
-                CCNN = Convert.ToBoolean(i["CCNN"].ToString())
+                CMND = Convert.ToBoolean(i["CMND"].ToString())
             };
         }
         public List<SV> GetSVByLSH(string LSH, string txt = "")
@@ -121,5 +121,42 @@ namespace GK
                 DBSV.Instance.UpdateRow(s);
             }
         }
+        public void DelSV(string MSSV)
+        {
+            DBSV.Instance.DelRow(MSSV);
+        }
+        public List<SV> GetSVDTG(List<string> now)
+        {
+            List<SV> data = new List<SV>();
+            foreach(string i in now)
+            {
+                foreach(SV sv in GetAllSV())
+                {
+                    if (i == sv.MSSV)
+                    {
+                        data.Add(sv);
+                        break;
+                    }
+                }
+            }
+            return data;
+        }
+        public List<SV> Sort(Func<SV,SV,bool> compare)
+        {
+            
+            List<SV> data=GetAllSV();
+            for(int i=0;i<data.Count;i++)
+                for(int j = 0; j < data.Count; j++)
+                {
+                    if (compare(data[i], data[j]))
+                    {
+                        var cc=data[i];
+                        data[i] = data[j];
+                        data[j] = cc;                            
+                    }
+                }
+            return data;
+        }
+
     }
 }

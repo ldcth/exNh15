@@ -38,7 +38,7 @@
             this.btUpdate = new System.Windows.Forms.Button();
             this.btDel = new System.Windows.Forms.Button();
             this.btSort = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbSort = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,6 +105,7 @@
             this.btAdd.TabIndex = 3;
             this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // btUpdate
             // 
@@ -114,6 +115,7 @@
             this.btUpdate.TabIndex = 3;
             this.btUpdate.Text = "Update";
             this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
             // btDel
             // 
@@ -123,6 +125,7 @@
             this.btDel.TabIndex = 3;
             this.btDel.Text = "Delete";
             this.btDel.UseVisualStyleBackColor = true;
+            this.btDel.Click += new System.EventHandler(this.btDel_Click);
             // 
             // btSort
             // 
@@ -132,14 +135,15 @@
             this.btSort.TabIndex = 3;
             this.btSort.Text = "Sort";
             this.btSort.UseVisualStyleBackColor = true;
+            this.btSort.Click += new System.EventHandler(this.btSort_Click);
             // 
-            // comboBox2
+            // cbbSort
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(620, 371);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 1;
+            this.cbbSort.FormattingEnabled = true;
+            this.cbbSort.Location = new System.Drawing.Point(620, 371);
+            this.cbbSort.Name = "cbbSort";
+            this.cbbSort.Size = new System.Drawing.Size(121, 28);
+            this.cbbSort.TabIndex = 1;
             // 
             // Form1
             // 
@@ -154,7 +158,7 @@
             this.Controls.Add(this.btShow);
             this.Controls.Add(this.btSearch);
             this.Controls.Add(this.tbName);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbbSort);
             this.Controls.Add(this.cbbLSH);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -179,7 +183,7 @@
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Button btDel;
         private System.Windows.Forms.Button btSort;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbbSort;
     }
 }
 
