@@ -63,7 +63,7 @@ namespace GK
         }
         public void AddRow(SV s)
         {
-           
+           DTSV.Rows.Add(s.MSSV,s.NameSV,s.LopSH,s.Gender,s.NgaySinh,s.Anh,s.Hocba,s.CMND);
         }
         public void UpdateRow(SV s)
         {
